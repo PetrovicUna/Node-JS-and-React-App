@@ -1,16 +1,18 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm"; 
+import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
-
-//ovim smo rekli da je Administrator entitet odnosno model
-@Entity()
+@Index("uq_administrator_username", ["username"], { unique: true })
+@Entity("administrator", { schema: "aplikacija" })
 export class Administrator {
-    @PrimaryGeneratedColumn({ name: 'administrator_id', type: 'int', unsigned: true}) 
-    //primaryGeneratedColumn za primarni kljuc se koristi ukoliko nam je u bazi autoinkrement vrednost
-    administratorId: number;
+  @PrimaryGeneratedColumn({
+    type: "int",
+    name: "administrator_id",
+    unsigned: true,
+  })
+  administratorId: number;
 
-    @Column({type: 'varchar', length: '32', unique: true})
-    username: string;
+  @Column("varchar", { name: "username", unique: true, length: 30 })
+  username: string;
 
-    @Column({name: 'password_hash', type: 'varchar', length: '128', unique: true})
-    password: string;
+  @Column("varchar", { name: "password_hash", length: 128 })
+  passwordHash: string;
 }
