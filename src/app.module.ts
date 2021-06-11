@@ -50,6 +50,8 @@ import { CategoryService } from './services/category/category.service';
       Administrator,
       Category,
       Article,
+      ArticlePrice,
+      ArticleFeature,
       Cart
     ])
   ],
