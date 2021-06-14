@@ -38,7 +38,7 @@ export class AuthController {
         let dateNow = new Date();
         dateNow.setDate(dateNow.getDate() + 14);
         const expireTimestamp = dateNow.getTime() / 1000;
-        jwtData.ext = expireTimestamp;
+        jwtData.exp = expireTimestamp;
 
         jwtData.ip = req.ip.toString();
         jwtData.ua = req.headers["user-agent"];
