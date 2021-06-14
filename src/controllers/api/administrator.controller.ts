@@ -1,4 +1,4 @@
-import { Body, Get, Param, Post, Put, SetMetadata, UseGuards } from "@nestjs/common";
+import { Body, Get, Param, Patch, Post, Put, SetMetadata, UseGuards } from "@nestjs/common";
 import { Controller } from "@nestjs/common";
 import { Administrator } from "src/entities/administrator.entity";
 import { AddAdministratorDto } from "src/dtos/administrator/add.administrator.dto";
@@ -37,17 +37,17 @@ export class AdministratorController {
       });
     }
 
-    // PUT https://localhost:3000/api/administrator/
+    // POST https://localhost:3000/api/administrator/
     //@Body kaze da cemo koristiti telo http zahteva i da ocekujemo data koji je tipa AdminDTO
-    @Put() 
+    @Post() 
     @UseGuards(RoleCheckedGuard)
     @AllowToRoles('administrator')
     add(@Body() data: AddAdministratorDto): Promise<Administrator | ApiResponse> {
         return this.administratorService.add(data);
     }
 
-    // POST https://localhost:3000/api/administrator/id/
-    @Post(':id') 
+    // PATCH https://localhost:3000/api/administrator/id/
+    @Patch(':id') 
     @UseGuards(RoleCheckedGuard)
     @AllowToRoles('administrator')
     edit(@Param('id') id: number, @Body() data: EditAdministratorDto): Promise<Administrator | ApiResponse> {
