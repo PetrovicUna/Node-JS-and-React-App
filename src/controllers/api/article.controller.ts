@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Param, Post, Req, UploadedFile, UseInterceptors } from "@nestjs/common";
+import { Body, Controller, Delete, Param, Patch, Post, Req, UploadedFile, UseInterceptors } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { Crud } from "@nestjsx/crud";
 import { Article } from "src/entities/article.entity";
@@ -12,6 +12,7 @@ import { ApiResponse } from "src/misc/api.response.class";
 import * as fileType from 'file-type';
 import * as fs from 'fs';
 import * as sharp from 'sharp';
+import { EditArticleDto } from "src/dtos/article/edit.article.dto";
 
 
 //params dodajemo zato sto crud metode prepoznaju samo id 
@@ -47,6 +48,9 @@ import * as sharp from 'sharp';
                 eager: true 
             }
         }
+    },
+    routes: {
+        exclude: ['updateOneBase', 'replaceOneBase', 'deleteOneBase'],
     }
 })
 export class ArticleController {
@@ -58,6 +62,11 @@ export class ArticleController {
     @Post('createFull')
     createFullArticle(@Body() data: AddArticleDto) {
         return this.service.createFullArticle(data);
+    }
+
+    @Patch(':id')
+    editFullArticle(@Param('id') id: number, @Body() data: EditArticleDto){
+        return this.service.editFullArticle(id,data);
     }
 
     @Post(':id/uploadPhoto/') //POST http://localhost:3000/api/article/:id/uploadPhoto/
@@ -195,7 +204,7 @@ export class ArticleController {
         }
 
         try{
-            
+
             fs.unlinkSync(StorageConfig.photo.destination + photo.imagePath);
             fs.unlinkSync(StorageConfig.photo.destination + 
                         StorageConfig.photo.resize.thumb.directory +
