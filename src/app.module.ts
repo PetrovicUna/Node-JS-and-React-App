@@ -13,6 +13,7 @@ import { Photo } from 'entities/photo.entity';
 import { User } from 'entities/user.entity';
 import { AdministratorController } from './controllers/api/administrator.controller';
 import { ArticleController } from './controllers/api/article.controller';
+import { AuthController } from './controllers/api/auth.controller';
 import { CartController } from './controllers/api/cart.controller';
 import { CategoryController } from './controllers/api/category.controller';
 import { AppController } from './controllers/app.controller';
@@ -60,7 +61,8 @@ import { CategoryService } from './services/category/category.service';
     AdministratorController,
     CategoryController,
     ArticleController,
-    CartController
+    CartController,
+    AuthController,
   ],
   providers: [
     AdministratorService,
