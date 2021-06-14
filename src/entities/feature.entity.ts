@@ -15,15 +15,15 @@ import { Category } from "./category.entity";
 
 @Index("uq_feature_name_category_id", ["name", "categoryId"], { unique: true })
 @Index("fk_feature_category_id", ["categoryId"], {})
-@Entity("feature", { schema: "aplikacija" })
+@Entity("feature")
 export class Feature {
   @PrimaryGeneratedColumn({ type: "int", name: "feature_id", unsigned: true })
   featureId: number;
 
-  @Column("varchar", { name: "name", length: 32})
+  @Column({ type:"varchar",  name: "name", length: 32})
   name: string;
 
-  @Column("int", { name: "category_id", unsigned: true})
+  @Column({type:"int",  name: "category_id", unsigned: true})
   categoryId: number;
 
   @OneToMany(() => ArticleFeature, (articleFeature) => articleFeature.feature)
