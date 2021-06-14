@@ -22,6 +22,7 @@ import { AdministratorService } from './services/administrator/administrator.ser
 import { ArticleService } from './services/article/article.service';
 import { CartService } from './services/cart/cart.service';
 import { CategoryService } from './services/category/category.service';
+import { PhotoService } from './services/photo/photo.service';
 
 
 //povezivanje sa bazom i koriscenje nase konekcije
@@ -48,13 +49,19 @@ import { CategoryService } from './services/category/category.service';
         User, 
       ]
     }),
+    //spisak svih entiteta koje koristimo za generisanje Cruda
     TypeOrmModule.forFeature([
       Administrator,
-      Category,
-      Article,
-      ArticlePrice,
-      ArticleFeature,
-      Cart
+        ArticleFeature,
+        ArticlePrice,
+        Article,
+        CartArticle,
+        Cart,
+        Category,
+        Feature,
+        Order,
+        Photo,
+        User, 
     ])
   ],
   controllers: [
@@ -69,7 +76,8 @@ import { CategoryService } from './services/category/category.service';
     AdministratorService,
     CategoryService,
     ArticleService,
-    CartService
+    CartService,
+    PhotoService,
   ],
   exports: [
     AdministratorService,
