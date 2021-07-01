@@ -7,7 +7,13 @@ export class ArticleSearchDto {
     @Validator.Length(2, 128)
     keywords: string;
 
-    @Validator.IsOptional()
+    @Validator.IsNotEmpty()
+    @Validator.IsPositive()
+    @Validator.IsNumber({
+        allowInfinity: false,
+        allowNaN: false,
+        maxDecimalPlaces: 2
+    })
     categoryId: number;
 
     @Validator.IsOptional()
@@ -37,8 +43,8 @@ export class ArticleSearchDto {
     orderBy: 'name' | 'price';
 
     @Validator.IsOptional()
-    @Validator.IsIn(['asc','desc'])
-    orderDirection: 'asc' | 'desc';
+    @Validator.IsIn(['ASC','DESC'])
+    orderDirection: 'ASC' | 'ASC';
 
     @Validator.IsOptional()
     @Validator.IsPositive()
