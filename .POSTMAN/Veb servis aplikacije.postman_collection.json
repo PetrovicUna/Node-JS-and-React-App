@@ -16,7 +16,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjUsInVzZXJuYW1lIjoiYWRtaW4iLCJleHQiOjE2MjQ4NzczMDQuMTY1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4wIiwiaWF0IjoxNjIzNjY3NzA0fQ.7WPlpvUD1ya_OgDwQp_8Vc8D-E1ivmYYP-TeZZbE7sw",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI0OTEyNjU4LjU2NSwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguMCIsImlhdCI6MTYyMzcwMzA1OH0._apV7Fp6n5ilZgFmy46qnlDGZ1mEwUjRiBR8r1Iu_M0",
 									"type": "string"
 								}
 							]
@@ -396,7 +396,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI0OTExMzA0Ljk5MywiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguMCIsImlhdCI6MTYyMzcwMTcwNH0.BZyn9gyjymTAxsEtb_5mk7UlYPiWbIzP7unH9aZuTj8",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI0OTExMzkzLjQ1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4wIiwiaWF0IjoxNjIzNzAxNzkzfQ.ji3yD8YHzpRZHEbN021rrKNWCeIN2J4b5vfIBvX_zvc",
 						"type": "string"
 					}
 				]
@@ -426,6 +426,179 @@
 			"name": "Article",
 			"item": [
 				{
+					"name": "Get all articles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYzNjM4ODguMzAyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4xIiwiaWF0IjoxNjI1MTU0Mjg4fQ.xjc_kpMAJCqy3Q5_lmozLKyaxyRg80wrr_qUPUCf9wU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/article",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all articles - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/article",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1421"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"58d-QQxo5Tl8apGGVWp2akTKcGkcngA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Jul 2021 15:54:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"articleId\": 1,\n        \"name\": \"Dermin Active\",\n        \"categoryId\": 9,\n        \"excerpt\": \"Kratak opis.\",\n        \"description\": \"Kratka deskripcija.\",\n        \"status\": \"available\",\n        \"isPromoted\": 0,\n        \"createdAt\": \"2021-06-08T12:31:20.000Z\",\n        \"category\": {\n            \"categoryId\": 9,\n            \"name\": \"Kreme protiv bora\",\n            \"imagePath\": \"assets/kznl/kreme/kremeprotivbora.jpg\",\n            \"parentCategoryId\": 3\n        },\n        \"photos\": [\n            {\n                \"photoId\": 18,\n                \"articleId\": 1,\n                \"imagePath\": \"2021614-4669042168-losion-slika.jpg\"\n            }\n        ],\n        \"articlePrices\": [\n            {\n                \"articlePriceId\": 1,\n                \"articleId\": 1,\n                \"price\": \"350.00\",\n                \"createdAt\": \"2021-06-08T12:42:01.000Z\"\n            }\n        ],\n        \"articleFeatures\": [\n            {\n                \"articleFeatureId\": 1,\n                \"articleId\": 1,\n                \"featureId\": 2,\n                \"value\": \"250ml\"\n            }\n        ],\n        \"features\": [\n            {\n                \"featureId\": 2,\n                \"name\": \"Kapacitet\",\n                \"categoryId\": 9\n            }\n        ]\n    },\n    {\n        \"articleId\": 2,\n        \"name\": \"test\",\n        \"categoryId\": 1,\n        \"excerpt\": \"Test1\",\n        \"description\": \"TestTest1\",\n        \"status\": \"visible\",\n        \"isPromoted\": 1,\n        \"createdAt\": \"2021-06-08T13:42:18.000Z\",\n        \"category\": {\n            \"categoryId\": 1,\n            \"name\": \"Kozmetika za negu lica\",\n            \"imagePath\": \"assets/kznl.jpg\",\n            \"parentCategoryId\": null\n        },\n        \"photos\": [],\n        \"articlePrices\": [\n            {\n                \"articlePriceId\": 21,\n                \"articleId\": 2,\n                \"price\": \"355.00\",\n                \"createdAt\": \"2021-06-14T19:10:43.000Z\"\n            },\n            {\n                \"articlePriceId\": 15,\n                \"articleId\": 2,\n                \"price\": \"450.00\",\n                \"createdAt\": \"2021-06-14T18:07:14.000Z\"\n            }\n        ],\n        \"articleFeatures\": [\n            {\n                \"articleFeatureId\": 5,\n                \"articleId\": 2,\n                \"featureId\": 2,\n                \"value\": \"10mlsl\"\n            },\n            {\n                \"articleFeatureId\": 4,\n                \"articleId\": 2,\n                \"featureId\": 1,\n                \"value\": \"Dove\"\n            }\n        ],\n        \"features\": [\n            {\n                \"featureId\": 1,\n                \"name\": \"Brand\",\n                \"categoryId\": 9\n            },\n            {\n                \"featureId\": 2,\n                \"name\": \"Kapacitet\",\n                \"categoryId\": 9\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYzNjM4ODguMzAyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4xIiwiaWF0IjoxNjI1MTU0Mjg4fQ.xjc_kpMAJCqy3Q5_lmozLKyaxyRg80wrr_qUPUCf9wU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/article/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single article - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/article/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"2",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "573"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23d-tSf55HgDU6r93X9JFYeUyapxZbA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Jun 2021 17:25:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 2,\n    \"name\": \"Test\",\n    \"categoryId\": 3,\n    \"excerpt\": \"Neki kratak tekst\",\n    \"description\": \"Neki duzi tekst\",\n    \"status\": \"available\",\n    \"isPromoted\": 0,\n    \"createdAt\": \"2021-06-08T13:42:18.000Z\",\n    \"category\": {\n        \"categoryId\": 3,\n        \"name\": \"Kreme\",\n        \"imagePath\": \"assets/kznl/kreme.jpg\",\n        \"parentCategoryId\": 1\n    },\n    \"photos\": [],\n    \"articlePrices\": [],\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 3,\n            \"articleId\": 2,\n            \"featureId\": 1,\n            \"value\": \"Nivea\"\n        },\n        {\n            \"articleFeatureId\": 2,\n            \"articleId\": 2,\n            \"featureId\": 2,\n            \"value\": \"5ml\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Brand\",\n            \"categoryId\": 9\n        },\n        {\n            \"featureId\": 2,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 9\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "createFull",
 					"request": {
 						"auth": {
@@ -448,7 +621,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"TestTest\",\r\n    \"categoryId\": 9,\r\n    \"excerpt\": \"Neki kratak tekst\",\r\n    \"description\": \"Neki duzi tekst\",\r\n    \"price\": 493.00,\r\n    \"features\": [\r\n        {\r\n            \"featureId\": 2,\r\n            \"value\": \"10ml\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"name\": \"TestTest\",\r\n    \"categoryId\": 8,\r\n    \"excerpt\": \"Neki kratak tekst\",\r\n    \"description\": \"Neki duzi tekst\",\r\n    \"price\": 493.00,\r\n    \"features\": [\r\n        {\r\n            \"featureId\": 1,\r\n            \"value\": \"10ml\"\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/article/createFull/",
@@ -666,85 +839,6 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"articleId\": \"1\",\n    \"imagePath\": \"2021614-4669042168-losion-slika.jpg\",\n    \"photoId\": 18\n}"
-						}
-					]
-				},
-				{
-					"name": "Get a single article",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/article/2/",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"article",
-								"2",
-								""
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get a single article - success",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:3000/api/article/2/",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"api",
-										"article",
-										"2",
-										""
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "573"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"23d-tSf55HgDU6r93X9JFYeUyapxZbA\""
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 14 Jun 2021 17:25:42 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"articleId\": 2,\n    \"name\": \"Test\",\n    \"categoryId\": 3,\n    \"excerpt\": \"Neki kratak tekst\",\n    \"description\": \"Neki duzi tekst\",\n    \"status\": \"available\",\n    \"isPromoted\": 0,\n    \"createdAt\": \"2021-06-08T13:42:18.000Z\",\n    \"category\": {\n        \"categoryId\": 3,\n        \"name\": \"Kreme\",\n        \"imagePath\": \"assets/kznl/kreme.jpg\",\n        \"parentCategoryId\": 1\n    },\n    \"photos\": [],\n    \"articlePrices\": [],\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 3,\n            \"articleId\": 2,\n            \"featureId\": 1,\n            \"value\": \"Nivea\"\n        },\n        {\n            \"articleFeatureId\": 2,\n            \"articleId\": 2,\n            \"featureId\": 2,\n            \"value\": \"5ml\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Brand\",\n            \"categoryId\": 9\n        },\n        {\n            \"featureId\": 2,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 9\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -971,7 +1065,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": " {  \"name\": \"test\",\r\n    \"categoryId\" : 1,\r\n    \"excerpt\": \"Test1\",\r\n    \"description\": \"TestTest1\",\r\n    \"status\": \"visible\",\r\n    \"isPromoted\": 1,\r\n    \"price\": 355,\r\n    \"features\" : [\r\n        {\r\n            \"featureId\" : 1,\r\n            \"value\" : \"Nivea\"\r\n\r\n        }\r\n    ]\r\n }"
+							"raw": " {  \"name\": \"test\",\r\n    \"categoryId\" : 1,\r\n    \"excerpt\": \"Test1\",\r\n    \"description\": \"TestTest1\",\r\n    \"status\": \"visible\",\r\n    \"isPromoted\": 1,\r\n    \"price\": 355,\r\n    \"features\" : [\r\n        {\r\n            \"featureId\" : 1,\r\n            \"value\" : \"Dove\"\r\n        },\r\n         {\r\n            \"featureId\" : 2,\r\n            \"value\" : \"10mlsl\"\r\n        }\r\n    ]\r\n }"
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/article/2/",
@@ -1056,6 +1150,175 @@
 							"body": "{\n    \"articleId\": 2,\n    \"name\": \"test\",\n    \"categoryId\": 1,\n    \"excerpt\": \"Test1\",\n    \"description\": \"TestTest1\",\n    \"status\": \"visible\",\n    \"isPromoted\": 1,\n    \"createdAt\": \"2021-06-08T13:42:18.000Z\",\n    \"category\": {\n        \"categoryId\": 1,\n        \"name\": \"Kozmetika za negu lica\",\n        \"imagePath\": \"assets/kznl.jpg\",\n        \"parentCategoryId\": null\n    },\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 3,\n            \"articleId\": 2,\n            \"featureId\": 1,\n            \"value\": \"Nivea\"\n        },\n        {\n            \"articleFeatureId\": 2,\n            \"articleId\": 2,\n            \"featureId\": 2,\n            \"value\": \"5ml\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Brand\",\n            \"categoryId\": 9\n        },\n        {\n            \"featureId\": 2,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 9\n        }\n    ],\n    \"articlePrices\": [\n        {\n            \"articlePriceId\": 15,\n            \"articleId\": 2,\n            \"price\": \"450.00\",\n            \"createdAt\": \"2021-06-14T18:07:14.000Z\"\n        },\n        {\n            \"articlePriceId\": 21,\n            \"articleId\": 2,\n            \"price\": \"355.00\",\n            \"createdAt\": \"2021-06-14T19:10:43.000Z\"\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "Search articles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYzNjM4ODguMzAyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4xIiwiaWF0IjoxNjI1MTU0Mjg4fQ.xjc_kpMAJCqy3Q5_lmozLKyaxyRg80wrr_qUPUCf9wU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\" : 9,\r\n    \"orderBy\" : \"price\",\r\n    \"orderDirection\" : \"DESC\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search articles - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryId\" : 1,\r\n    \"keywords\": \"test1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"search"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a3-ZHNBOm3o+DS0l3rkI7SZsJUQS98\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Jul 2021 15:53:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"articleId\": 2,\n        \"name\": \"test\",\n        \"categoryId\": 1,\n        \"excerpt\": \"Test1\",\n        \"description\": \"TestTest1\",\n        \"status\": \"visible\",\n        \"isPromoted\": 1,\n        \"createdAt\": \"2021-06-08T13:42:18.000Z\"\n    }\n]"
+						},
+						{
+							"name": "Search articles - success with all",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryId\" : 9,\r\n    \"orderBy\" : \"price\",\r\n    \"orderDirection\" : \"DESC\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/search",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"search"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1016"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f8-4xMA7I++6eE9u++kfZs2o1rC69Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Jul 2021 16:20:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"articleId\": 1,\n        \"name\": \"Dermin Active\",\n        \"categoryId\": 9,\n        \"excerpt\": \"Kratak opis.\",\n        \"description\": \"Kratka deskripcija.\",\n        \"status\": \"available\",\n        \"isPromoted\": 0,\n        \"createdAt\": \"2021-06-08T12:31:20.000Z\",\n        \"category\": {\n            \"categoryId\": 9,\n            \"name\": \"Kreme protiv bora\",\n            \"imagePath\": \"assets/kznl/kreme/kremeprotivbora.jpg\",\n            \"parentCategoryId\": 3\n        },\n        \"articleFeatures\": [\n            {\n                \"articleFeatureId\": 1,\n                \"articleId\": 1,\n                \"featureId\": 2,\n                \"value\": \"250ml\"\n            }\n        ],\n        \"features\": [\n            {\n                \"featureId\": 2,\n                \"name\": \"Kapacitet\",\n                \"categoryId\": 9\n            }\n        ],\n        \"articlePrices\": [\n            {\n                \"articlePriceId\": 1,\n                \"articleId\": 1,\n                \"price\": \"350.00\",\n                \"createdAt\": \"2021-06-08T12:42:01.000Z\"\n            }\n        ]\n    },\n    {\n        \"articleId\": 20,\n        \"name\": \"Sensodyne\",\n        \"categoryId\": 9,\n        \"excerpt\": \"Kratak\",\n        \"description\": \"Heheh\",\n        \"status\": \"hidden\",\n        \"isPromoted\": 1,\n        \"createdAt\": \"2021-07-01T16:05:15.000Z\",\n        \"category\": {\n            \"categoryId\": 9,\n            \"name\": \"Kreme protiv bora\",\n            \"imagePath\": \"assets/kznl/kreme/kremeprotivbora.jpg\",\n            \"parentCategoryId\": 3\n        },\n        \"articleFeatures\": [],\n        \"features\": [],\n        \"articlePrices\": [\n            {\n                \"articlePriceId\": 22,\n                \"articleId\": 20,\n                \"price\": \"340.00\",\n                \"createdAt\": \"2021-07-01T16:05:42.000Z\"\n            }\n        ]\n    }\n]"
+						}
+					]
 				}
 			],
 			"auth": {
@@ -1063,7 +1326,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbmlzdHJhdG9ySWQiOjUsInVzZXJuYW1lIjoiYWRtaW4iLCJleHQiOjE2MjQ4ODc0MzIuNjMzLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4wIiwiaWF0IjoxNjIzNjc3ODMyfQ.XGOx_lD-5HkbNTsGxsz7SVbsm3AsoweTUkL_A31A2I4",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYzNjM4ODguMzAyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4xIiwiaWF0IjoxNjI1MTU0Mjg4fQ.xjc_kpMAJCqy3Q5_lmozLKyaxyRg80wrr_qUPUCf9wU",
 						"type": "string"
 					}
 				]
@@ -1108,7 +1371,7 @@
 							"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\"\r\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/auth/login/",
+							"raw": "http://localhost:3000/auth/administrator/login/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1116,6 +1379,7 @@
 							"port": "3000",
 							"path": [
 								"auth",
+								"administrator",
 								"login",
 								""
 							]
@@ -1299,7 +1563,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\" : \"unapet998@gmail.com\",\r\n    \"password\" : \"malena13se\"\r\n}"
+									"raw": "{\r\n    \"email\" : \"unapet998@gmail.com\",\r\n    \"password\" : \"malena13\"\r\n}"
 								},
 								"url": {
 									"raw": "http://localhost:3000/auth/user/login/",
@@ -1367,7 +1631,7 @@
 								}
 							]
 						},
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -1377,7 +1641,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"unapet998@gmail.com\",\r\n    \"password\": \"malena13\",\r\n    \"forename\": \"Una\",\r\n    \"surname\": \"Petrovic\",\r\n    \"postalAdresss\": \"Jurija Gagarina 115\"\r\n}"
+							"raw": "{\r\n    \"email\": \"unapet2348@gmail.com\",\r\n    \"password\": \"abc\",\r\n    \"forename\": \"Una\",\r\n    \"surname\": \"Petrovic\",\r\n    \"postalAdresss\": \"Jurija Gagarina 115\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:3000/auth/user/register/",
@@ -1526,8 +1790,104 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -6001,\n    \"message\": \"This user account cannot be created!\"\n}"
+						},
+						{
+							"name": "Register a new user account - bad request bad password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"unapet2348@gmail.com\",\r\n    \"password\": \"abc\",\r\n    \"forename\": \"Una\",\r\n    \"surname\": \"Petrovic\",\r\n    \"postalAdresss\": \"Jurija Gagarina 115\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/user/register/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"user",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "108"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c-Ya2Yfj5/JUqx0b/eFatsSmvRYpY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Jun 2021 22:05:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 400,\n    \"message\": [\n        \"password must be longer than or equal to 6 characters\"\n    ],\n    \"error\": \"Bad Request\"\n}"
 						}
 					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI0OTExMzkzLjQ1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4wIiwiaWF0IjoxNjIzNzAxNzkzfQ.ji3yD8YHzpRZHEbN021rrKNWCeIN2J4b5vfIBvX_zvc",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -1831,7 +2191,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"KolicinaTest\"\r\n}"
+							"raw": "{\r\n    \"name\" : \"Kolicina\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/feature/7/",
@@ -1923,7 +2283,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI0OTExMzA0Ljk5MywiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguMCIsImlhdCI6MTYyMzcwMTcwNH0.BZyn9gyjymTAxsEtb_5mk7UlYPiWbIzP7unH9aZuTj8",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI0OTExMzkzLjQ1LCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4wIiwiaWF0IjoxNjIzNzAxNzkzfQ.ji3yD8YHzpRZHEbN021rrKNWCeIN2J4b5vfIBvX_zvc",
 						"type": "string"
 					}
 				]
@@ -1948,6 +2308,624 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Cart and Order",
+			"item": [
+				{
+					"name": "Get current cart details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYzNjM4ODguMzAyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4xIiwiaWF0IjoxNjI1MTU0Mjg4fQ.xjc_kpMAJCqy3Q5_lmozLKyaxyRg80wrr_qUPUCf9wU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get current cart details - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user/cart/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"cart",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "351"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15f-H6ZOjM61DrR8sM7XuV34yWQ6S+4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Jun 2021 18:15:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cartId\": 1,\n    \"userId\": 1,\n    \"createdAt\": \"2021-06-28T18:13:04.000Z\",\n    \"user\": {\n        \"userId\": 1,\n        \"email\": \"unapet998@gmail.com\",\n        \"paswordHash\": \"834A1480EF43E8EBF9F9E10A5A7F8DBAC68EE7A96870A0576907AE68DDB107EDCFEA2963BCFBB78F6B6BD6A70970FDB4AA3A874DD1A21665BC0B2EA7C4981A25\",\n        \"forename\": \"Una\",\n        \"surname\": \"Petrovic\",\n        \"postalAddress\": \"Jurija Gagarina 115\"\n    },\n    \"cartArticles\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Add article to the current cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYzNjM4ODguMzAyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4xIiwiaWF0IjoxNjI1MTU0Mjg4fQ.xjc_kpMAJCqy3Q5_lmozLKyaxyRg80wrr_qUPUCf9wU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"articleId\" : 2,\r\n    \"quantity\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/cart/addToCart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"cart",
+								"addToCart",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add article to the current cart - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"articleId\" : 1,\r\n    \"quantity\" : 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/cart/addToCart/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"cart",
+										"addToCart",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "736"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e0-SPB21eEFhuNwDFxcYenatnyfJvU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Jun 2021 18:18:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cartId\": 1,\n    \"userId\": 1,\n    \"createdAt\": \"2021-06-28T18:13:04.000Z\",\n    \"user\": {\n        \"userId\": 1,\n        \"email\": \"unapet998@gmail.com\",\n        \"paswordHash\": \"834A1480EF43E8EBF9F9E10A5A7F8DBAC68EE7A96870A0576907AE68DDB107EDCFEA2963BCFBB78F6B6BD6A70970FDB4AA3A874DD1A21665BC0B2EA7C4981A25\",\n        \"forename\": \"Una\",\n        \"surname\": \"Petrovic\",\n        \"postalAddress\": \"Jurija Gagarina 115\"\n    },\n    \"cartArticles\": [\n        {\n            \"cartArticleId\": 1,\n            \"cartId\": 1,\n            \"articleId\": 1,\n            \"quantity\": 2,\n            \"article\": {\n                \"articleId\": 1,\n                \"name\": \"Dermin Active\",\n                \"categoryId\": 9,\n                \"excerpt\": \"Kratak opis.\",\n                \"description\": \"Kratka deskripcija.\",\n                \"status\": \"available\",\n                \"isPromoted\": 0,\n                \"createdAt\": \"2021-06-08T12:31:20.000Z\",\n                \"category\": {\n                    \"categoryId\": 9,\n                    \"name\": \"Kreme protiv bora\",\n                    \"imagePath\": \"assets/kznl/kreme/kremeprotivbora.jpg\",\n                    \"parentCategoryId\": 3\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit article quantity in current cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYxMTM1NjAuMTIyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4wIiwiaWF0IjoxNjI0OTAzOTYwfQ.9CnlnpWrl4E_GD8y5bocFacje7SbFtOICNgxWU14npM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"articleId\" : 2,\r\n    \"quantity\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit article quantity in current cart - success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"articleId\" : 2,\r\n    \"quantity\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/cart/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"cart",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1080"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"438-KgS3Gf7k2CgqZtdqE4fuiBngSng\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Jun 2021 20:23:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cartId\": 1,\n    \"userId\": 1,\n    \"createdAt\": \"2021-06-28T18:13:04.000Z\",\n    \"user\": {\n        \"userId\": 1,\n        \"email\": \"unapet998@gmail.com\",\n        \"paswordHash\": \"834A1480EF43E8EBF9F9E10A5A7F8DBAC68EE7A96870A0576907AE68DDB107EDCFEA2963BCFBB78F6B6BD6A70970FDB4AA3A874DD1A21665BC0B2EA7C4981A25\",\n        \"forename\": \"Una\",\n        \"surname\": \"Petrovic\",\n        \"postalAddress\": \"Jurija Gagarina 115\"\n    },\n    \"cartArticles\": [\n        {\n            \"cartArticleId\": 1,\n            \"cartId\": 1,\n            \"articleId\": 1,\n            \"quantity\": 3,\n            \"article\": {\n                \"articleId\": 1,\n                \"name\": \"Dermin Active\",\n                \"categoryId\": 9,\n                \"excerpt\": \"Kratak opis.\",\n                \"description\": \"Kratka deskripcija.\",\n                \"status\": \"available\",\n                \"isPromoted\": 0,\n                \"createdAt\": \"2021-06-08T12:31:20.000Z\",\n                \"category\": {\n                    \"categoryId\": 9,\n                    \"name\": \"Kreme protiv bora\",\n                    \"imagePath\": \"assets/kznl/kreme/kremeprotivbora.jpg\",\n                    \"parentCategoryId\": 3\n                }\n            }\n        },\n        {\n            \"cartArticleId\": 2,\n            \"cartId\": 1,\n            \"articleId\": 2,\n            \"quantity\": 1,\n            \"article\": {\n                \"articleId\": 2,\n                \"name\": \"test\",\n                \"categoryId\": 1,\n                \"excerpt\": \"Test1\",\n                \"description\": \"TestTest1\",\n                \"status\": \"visible\",\n                \"isPromoted\": 1,\n                \"createdAt\": \"2021-06-08T13:42:18.000Z\",\n                \"category\": {\n                    \"categoryId\": 1,\n                    \"name\": \"Kozmetika za negu lica\",\n                    \"imagePath\": \"assets/kznl.jpg\",\n                    \"parentCategoryId\": null\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Make an order for current cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYzNjM4ODguMzAyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4xIiwiaWF0IjoxNjI1MTU0Mjg4fQ.xjc_kpMAJCqy3Q5_lmozLKyaxyRg80wrr_qUPUCf9wU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/cart/makeOrder/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"cart",
+								"makeOrder",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlkIjoxLCJpZGVudGl0eSI6InVuYXBldDk5OEBnbWFpbC5jb20iLCJleHAiOjE2MjYxMTM1NjAuMTIyLCJpcCI6Ijo6MSIsInVhIjoiUG9zdG1hblJ1bnRpbWUvNy4yOC4wIiwiaWF0IjoxNjI0OTAzOTYwfQ.9CnlnpWrl4E_GD8y5bocFacje7SbFtOICNgxWU14npM",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get order information",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI2NzgwNDEzLjE3MSwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguMSIsImlhdCI6MTYyNTU3MDgxM30.w6mGwHdljWfw2LaaPxV5gwbybSgGXaP5b4Q-4ubUDTI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/order/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get order information -  success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/order/1/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1481"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c9-4VwIE3RGbs/kr7ucVkt/jAvrYYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jul 2021 11:27:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": 1,\n    \"createdAt\": \"2021-06-28T20:43:57.000Z\",\n    \"cartId\": 1,\n    \"status\": \"pending\",\n    \"cart\": {\n        \"cartId\": 1,\n        \"userId\": 1,\n        \"createdAt\": \"2021-06-28T18:13:04.000Z\",\n        \"user\": {\n            \"userId\": 1,\n            \"email\": \"unapet998@gmail.com\",\n            \"paswordHash\": \"834A1480EF43E8EBF9F9E10A5A7F8DBAC68EE7A96870A0576907AE68DDB107EDCFEA2963BCFBB78F6B6BD6A70970FDB4AA3A874DD1A21665BC0B2EA7C4981A25\",\n            \"forename\": \"Una\",\n            \"surname\": \"Petrovic\",\n            \"postalAddress\": \"Jurija Gagarina 115\"\n        },\n        \"cartArticles\": [\n            {\n                \"cartArticleId\": 1,\n                \"cartId\": 1,\n                \"articleId\": 1,\n                \"quantity\": 3,\n                \"article\": {\n                    \"articleId\": 1,\n                    \"name\": \"Dermin Active\",\n                    \"categoryId\": 9,\n                    \"excerpt\": \"Kratak opis.\",\n                    \"description\": \"Kratka deskripcija.\",\n                    \"status\": \"available\",\n                    \"isPromoted\": 0,\n                    \"createdAt\": \"2021-06-08T12:31:20.000Z\",\n                    \"category\": {\n                        \"categoryId\": 9,\n                        \"name\": \"Kreme protiv bora\",\n                        \"imagePath\": \"assets/kznl/kreme/kremeprotivbora.jpg\",\n                        \"parentCategoryId\": 3\n                    },\n                    \"articlePrices\": [\n                        {\n                            \"articlePriceId\": 1,\n                            \"articleId\": 1,\n                            \"price\": \"350.00\",\n                            \"createdAt\": \"2021-06-08T12:42:01.000Z\"\n                        }\n                    ]\n                }\n            },\n            {\n                \"cartArticleId\": 2,\n                \"cartId\": 1,\n                \"articleId\": 2,\n                \"quantity\": 1,\n                \"article\": {\n                    \"articleId\": 2,\n                    \"name\": \"test\",\n                    \"categoryId\": 1,\n                    \"excerpt\": \"Test1\",\n                    \"description\": \"TestTest1\",\n                    \"status\": \"visible\",\n                    \"isPromoted\": 1,\n                    \"createdAt\": \"2021-06-08T13:42:18.000Z\",\n                    \"category\": {\n                        \"categoryId\": 1,\n                        \"name\": \"Kozmetika za negu lica\",\n                        \"imagePath\": \"assets/kznl.jpg\",\n                        \"parentCategoryId\": null\n                    },\n                    \"articlePrices\": [\n                        {\n                            \"articlePriceId\": 21,\n                            \"articleId\": 2,\n                            \"price\": \"355.00\",\n                            \"createdAt\": \"2021-06-14T19:10:43.000Z\"\n                        },\n                        {\n                            \"articlePriceId\": 15,\n                            \"articleId\": 2,\n                            \"price\": \"450.00\",\n                            \"createdAt\": \"2021-06-14T18:07:14.000Z\"\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change order status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI2NzgwNDEzLjE3MSwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguMSIsImlhdCI6MTYyNTU3MDgxM30.w6mGwHdljWfw2LaaPxV5gwbybSgGXaP5b4Q-4ubUDTI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newStatus\" : \"shipped\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change order status - success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newStatus\" : \"shipped\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/order/1/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1481"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c9-6RHO9KaMnWzXY6G+XFxO7VzYo8o\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jul 2021 11:30:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orderId\": 1,\n    \"createdAt\": \"2021-06-28T20:43:57.000Z\",\n    \"cartId\": 1,\n    \"status\": \"shipped\",\n    \"cart\": {\n        \"cartId\": 1,\n        \"userId\": 1,\n        \"createdAt\": \"2021-06-28T18:13:04.000Z\",\n        \"user\": {\n            \"userId\": 1,\n            \"email\": \"unapet998@gmail.com\",\n            \"paswordHash\": \"834A1480EF43E8EBF9F9E10A5A7F8DBAC68EE7A96870A0576907AE68DDB107EDCFEA2963BCFBB78F6B6BD6A70970FDB4AA3A874DD1A21665BC0B2EA7C4981A25\",\n            \"forename\": \"Una\",\n            \"surname\": \"Petrovic\",\n            \"postalAddress\": \"Jurija Gagarina 115\"\n        },\n        \"cartArticles\": [\n            {\n                \"cartArticleId\": 1,\n                \"cartId\": 1,\n                \"articleId\": 1,\n                \"quantity\": 3,\n                \"article\": {\n                    \"articleId\": 1,\n                    \"name\": \"Dermin Active\",\n                    \"categoryId\": 9,\n                    \"excerpt\": \"Kratak opis.\",\n                    \"description\": \"Kratka deskripcija.\",\n                    \"status\": \"available\",\n                    \"isPromoted\": 0,\n                    \"createdAt\": \"2021-06-08T12:31:20.000Z\",\n                    \"category\": {\n                        \"categoryId\": 9,\n                        \"name\": \"Kreme protiv bora\",\n                        \"imagePath\": \"assets/kznl/kreme/kremeprotivbora.jpg\",\n                        \"parentCategoryId\": 3\n                    },\n                    \"articlePrices\": [\n                        {\n                            \"articlePriceId\": 1,\n                            \"articleId\": 1,\n                            \"price\": \"350.00\",\n                            \"createdAt\": \"2021-06-08T12:42:01.000Z\"\n                        }\n                    ]\n                }\n            },\n            {\n                \"cartArticleId\": 2,\n                \"cartId\": 1,\n                \"articleId\": 2,\n                \"quantity\": 1,\n                \"article\": {\n                    \"articleId\": 2,\n                    \"name\": \"test\",\n                    \"categoryId\": 1,\n                    \"excerpt\": \"Test1\",\n                    \"description\": \"TestTest1\",\n                    \"status\": \"visible\",\n                    \"isPromoted\": 1,\n                    \"createdAt\": \"2021-06-08T13:42:18.000Z\",\n                    \"category\": {\n                        \"categoryId\": 1,\n                        \"name\": \"Kozmetika za negu lica\",\n                        \"imagePath\": \"assets/kznl.jpg\",\n                        \"parentCategoryId\": null\n                    },\n                    \"articlePrices\": [\n                        {\n                            \"articlePriceId\": 21,\n                            \"articleId\": 2,\n                            \"price\": \"355.00\",\n                            \"createdAt\": \"2021-06-14T19:10:43.000Z\"\n                        },\n                        {\n                            \"articlePriceId\": 15,\n                            \"articleId\": 2,\n                            \"price\": \"450.00\",\n                            \"createdAt\": \"2021-06-14T18:07:14.000Z\"\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlkIjo1LCJpZGVudGl0eSI6ImFkbWluIiwiZXhwIjoxNjI0OTEyNjU4LjU2NSwiaXAiOiI6OjEiLCJ1YSI6IlBvc3RtYW5SdW50aW1lLzcuMjguMCIsImlhdCI6MTYyMzcwMzA1OH0._apV7Fp6n5ilZgFmy46qnlDGZ1mEwUjRiBR8r1Iu_M0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
